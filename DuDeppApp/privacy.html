@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung / Privacy Policy - Du Depp App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0F1923 0%, #1A2A3A 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A25 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .language-toggle {
+            background: #0F1923;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .language-toggle button {
+            padding: 10px 24px;
+            border: 2px solid #FF6B35;
+            background: transparent;
+            color: #FF6B35;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .language-toggle button.active {
+            background: #FF6B35;
+            color: white;
+        }
+        
+        .language-toggle button:hover {
+            background: #FF6B35;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .language-section {
+            display: none;
+        }
+        
+        .language-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            color: #FF6B35;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        h3 {
+            color: #0F1923;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #FF6B35;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .footer {
+            background: #0F1923;
+            color: #8899AA;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.95em;
+        }
+        
+        .last-updated {
+            color: #8899AA;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Du Depp App</h1>
+            <p>Datenschutzerklärung / Privacy Policy</p>
+        </div>
+        
+        <div class="language-toggle">
+            <button onclick="showLanguage('de')" id="btn-de" class="active">🇩🇪 Deutsch</button>
+            <button onclick="showLanguage('en')" id="btn-en">🇬🇧 English</button>
+        </div>
+        
+        <div class="content">
+            <!-- German Version -->
+            <div id="de" class="language-section active">
+                <p class="last-updated">Zuletzt aktualisiert: 16. Februar 2026</p>
+                
+                <h2>1. Einleitung</h2>
+                <p>
+                    Willkommen bei der "Du Depp App"! Diese Datenschutzerklärung erklärt, wie wir mit deinen Daten umgehen, 
+                    wenn du unsere App nutzt. Dein Datenschutz ist uns wichtig.
+                </p>
+                
+                <div class="highlight-box">
+                    <strong>Kurz gesagt:</strong> Wir sammeln KEINE persönlichen Daten. Die App funktioniert komplett offline 
+                    auf deinem Gerät. Alle Einstellungen werden nur lokal gespeichert.
+                </div>
+                
+                <h2>2. Verantwortlicher</h2>
+                <p>
+                    Verantwortlich für die Datenverarbeitung dieser App ist:<br>
+                    <strong>MarkusEpp</strong><br>
+                    E-Mail: markus.epp.dev@gmail.com
+                </p>
+                
+                <h2>3. Welche Daten werden erfasst?</h2>
+                
+                <h3>3.1 Lokale Speicherung (auf deinem Gerät)</h3>
+                <p>Die App speichert folgende Daten <strong>nur lokal</strong> auf deinem Gerät:</p>
+                <ul>
+                    <li><strong>Spieleinstellungen:</strong> Startzeit, Spielernamen (die du eingibst), Kategorien-Einstellungen</li>
+                    <li><strong>Spielstände:</strong> Punktzahlen während einer Spielsitzung</li>
+                </ul>
+                <p>
+                    Diese Daten werden mit AsyncStorage (lokaler Speicher) gespeichert und <strong>verlassen niemals dein Gerät</strong>. 
+                    Sie werden nicht an uns oder Dritte übermittelt.
+                </p>
+                
+                <h3>3.2 Keine persönlichen Daten</h3>
+                <p>Wir sammeln KEINE:</p>
+                <ul>
+                    <li>Namen, E-Mail-Adressen oder Kontaktdaten</li>
+                    <li>Standortdaten</li>
+                    <li>Fotos oder Dateien von deinem Gerät</li>
+                    <li>Nutzungsstatistiken oder Analysen</li>
+                    <li>Werbe-IDs oder Tracking-Daten</li>
+                </ul>
+                
+                <h2>4. Wie werden Daten verwendet?</h2>
+                <p>
+                    Die lokal gespeicherten Daten (Spielernamen, Einstellungen) werden ausschließlich dazu verwendet, 
+                    deine Spieleinstellungen beim nächsten Öffnen der App wiederherzustellen. Das war's!
+                </p>
+                
+                <h2>5. Datenweitergabe an Dritte</h2>
+                <p>
+                    <strong>Es werden KEINE Daten an Dritte weitergegeben.</strong> Die App enthält keine Analysetools, 
+                    keine Werbenetzwerke und keine externen Dienste, die Daten sammeln könnten.
+                </p>
+                
+                <h2>6. Datensicherheit</h2>
+                <p>
+                    Da alle Daten nur lokal auf deinem Gerät gespeichert werden, liegt die Sicherheit in deiner Hand. 
+                    Wir empfehlen, dein Gerät mit einem Passcode/Touch ID/Face ID zu schützen.
+                </p>
+                
+                <h2>7. Deine Rechte</h2>
+                <p>Da wir keine persönlichen Daten sammeln, gibt es keine zentrale Datenbank, auf die du zugreifen müsstest. Du kannst:</p>
+                <ul>
+                    <li><strong>Alle Daten löschen:</strong> Nutze die "Einstellungen zurücksetzen"-Funktion in der App 
+                        oder deinstalliere die App komplett</li>
+                    <li><strong>Einstellungen ändern:</strong> Jederzeit in der App möglich</li>
+                </ul>
+                
+                <h2>8. Kinder</h2>
+                <p>
+                    Die App richtet sich an Nutzer jeden Alters und sammelt keine persönlichen Daten. 
+                    Eltern sollten jedoch die Spielernamen, die ihre Kinder eingeben, im Auge behalten.
+                </p>
+                
+                <h2>9. Änderungen dieser Datenschutzerklärung</h2>
+                <p>
+                    Wir können diese Datenschutzerklärung gelegentlich aktualisieren. Änderungen werden mit einem 
+                    neuen "Zuletzt aktualisiert"-Datum versehen. Bei wesentlichen Änderungen wirst du in der App informiert.
+                </p>
+                
+                <h2>10. Kontakt</h2>
+                <p>
+                    Bei Fragen zum Datenschutz kannst du uns kontaktieren unter:<br>
+                    E-Mail: <strong>markus.epp.dev@gmail.com</strong>
+                </p>
+            </div>
+            
+            <!-- English Version -->
+            <div id="en" class="language-section">
+                <p class="last-updated">Last updated: February 16, 2026</p>
+                
+                <h2>1. Introduction</h2>
+                <p>
+                    Welcome to "Du Depp App"! This Privacy Policy explains how we handle your data when you use our app. 
+                    Your privacy is important to us.
+                </p>
+                
+                <div class="highlight-box">
+                    <strong>In short:</strong> We do NOT collect any personal data. The app works completely offline 
+                    on your device. All settings are stored locally only.
+                </div>
+                
+                <h2>2. Data Controller</h2>
+                <p>
+                    The data controller for this app is:<br>
+                    <strong>MarkusEpp</strong><br>
+                    Email: markus.epp.dev@gmail.com
+                </p>
+                
+                <h2>3. What Data is Collected?</h2>
+                
+                <h3>3.1 Local Storage (on your device)</h3>
+                <p>The app stores the following data <strong>only locally</strong> on your device:</p>
+                <ul>
+                    <li><strong>Game settings:</strong> Start time, player names (that you enter), category settings</li>
+                    <li><strong>Game scores:</strong> Points during a game session</li>
+                </ul>
+                <p>
+                    This data is stored using AsyncStorage (local storage) and <strong>never leaves your device</strong>. 
+                    It is not transmitted to us or any third parties.
+                </p>
+                
+                <h3>3.2 No Personal Data</h3>
+                <p>We do NOT collect:</p>
+                <ul>
+                    <li>Names, email addresses, or contact information</li>
+                    <li>Location data</li>
+                    <li>Photos or files from your device</li>
+                    <li>Usage statistics or analytics</li>
+                    <li>Advertising IDs or tracking data</li>
+                </ul>
+                
+                <h2>4. How is Data Used?</h2>
+                <p>
+                    The locally stored data (player names, settings) is used exclusively to restore your game settings 
+                    the next time you open the app. That's it!
+                </p>
+                
+                <h2>5. Data Sharing with Third Parties</h2>
+                <p>
+                    <strong>NO data is shared with third parties.</strong> The app contains no analytics tools, 
+                    no advertising networks, and no external services that could collect data.
+                </p>
+                
+                <h2>6. Data Security</h2>
+                <p>
+                    Since all data is stored only locally on your device, security is in your hands. 
+                    We recommend protecting your device with a passcode/Touch ID/Face ID.
+                </p>
+                
+                <h2>7. Your Rights</h2>
+                <p>Since we don't collect personal data, there's no central database you need to access. You can:</p>
+                <ul>
+                    <li><strong>Delete all data:</strong> Use the "Reset Settings" feature in the app 
+                        or uninstall the app completely</li>
+                    <li><strong>Change settings:</strong> Possible at any time in the app</li>
+                </ul>
+                
+                <h2>8. Children</h2>
+                <p>
+                    The app is suitable for users of all ages and does not collect personal data. 
+                    However, parents should monitor the player names their children enter.
+                </p>
+                
+                <h2>9. Changes to this Privacy Policy</h2>
+                <p>
+                    We may update this Privacy Policy occasionally. Changes will be marked with a new 
+                    "Last updated" date. You will be notified in the app about significant changes.
+                </p>
+                
+                <h2>10. Contact</h2>
+                <p>
+                    For privacy questions, you can contact us at:<br>
+                    Email: <strong>markus.epp.dev@gmail.com</strong>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Du Depp App</strong> - Das ultimative Party-Spiel</p>
+            <p style="margin-top: 10px;">© 2026 - Alle Rechte vorbehalten / All rights reserved</p>
+        </div>
+    </div>
+    
+    <script>
+        function showLanguage(lang) {
+            // Hide all sections
+            document.querySelectorAll('.language-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.language-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
