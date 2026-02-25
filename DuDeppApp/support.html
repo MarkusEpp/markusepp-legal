@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Du Depp App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0F1923 0%, #1A2A3A 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A25 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .language-toggle {
+            background: #0F1923;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .language-toggle button {
+            padding: 10px 24px;
+            border: 2px solid #FF6B35;
+            background: transparent;
+            color: #FF6B35;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle button.active {
+            background: #FF6B35;
+            color: white;
+        }
+
+        .language-toggle button:hover {
+            background: #FF6B35;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .language-section {
+            display: none;
+        }
+
+        .language-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #FF6B35;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #0F1923;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #FF6B35;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #FF6B35 0%, #E55A25 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(255, 107, 53, 0.4);
+        }
+
+        .footer {
+            background: #0F1923;
+            color: #8899AA;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Du Depp App</h1>
+            <p>Support</p>
+        </div>
+
+        <div class="language-toggle">
+            <button onclick="showLanguage('de')" id="btn-de" class="active">🇩🇪 Deutsch</button>
+            <button onclick="showLanguage('en')" id="btn-en">🇬🇧 English</button>
+        </div>
+
+        <div class="content">
+
+            <!-- German Version -->
+            <div id="de" class="language-section active">
+
+                <h2>Support & Kontakt</h2>
+                <p>
+                    Du hast ein Problem mit der App, einen Fehler gefunden oder eine Idee für eine neue Funktion?
+                    Ich helfe dir gerne weiter!
+                </p>
+
+                <div class="highlight-box">
+                    <strong>Beta-Tester:</strong> Euer Feedback ist super wertvoll! Schreibt mir einfach eine Mail –
+                    je mehr Details, desto besser.
+                </div>
+
+                <h2>Fehler melden</h2>
+                <p>Bitte beschreibe beim Melden eines Fehlers möglichst genau:</p>
+                <ul>
+                    <li>Was hast du gemacht, als der Fehler aufgetreten ist?</li>
+                    <li>Was hast du erwartet, dass passiert?</li>
+                    <li>Was ist stattdessen passiert?</li>
+                    <li>Dein iPhone-Modell und iOS-Version (Einstellungen → Allgemein → Info)</li>
+                </ul>
+
+                <h2>Kontakt</h2>
+                <p>Schreib mir eine E-Mail – ich melde mich so schnell wie möglich:</p>
+                <p>
+                    <a class="contact-button" href="mailto:markus.epp.dev@gmail.com?subject=Du%20Depp%20App%20Support">
+                        ✉️ markus.epp.dev@gmail.com
+                    </a>
+                </p>
+
+            </div>
+
+            <!-- English Version -->
+            <div id="en" class="language-section">
+
+                <h2>Support & Contact</h2>
+                <p>
+                    Found a bug, having trouble with the app, or have an idea for a new feature?
+                    I'm happy to help!
+                </p>
+
+                <div class="highlight-box">
+                    <strong>Beta testers:</strong> Your feedback is super valuable! Just send me an email –
+                    the more detail the better.
+                </div>
+
+                <h2>Reporting a Bug</h2>
+                <p>When reporting a bug, please include as much detail as possible:</p>
+                <ul>
+                    <li>What were you doing when the bug occurred?</li>
+                    <li>What did you expect to happen?</li>
+                    <li>What happened instead?</li>
+                    <li>Your iPhone model and iOS version (Settings → General → About)</li>
+                </ul>
+
+                <h2>Contact</h2>
+                <p>Send me an email – I'll get back to you as soon as possible:</p>
+                <p>
+                    <a class="contact-button" href="mailto:markus.epp.dev@gmail.com?subject=Du%20Depp%20App%20Support">
+                        ✉️ markus.epp.dev@gmail.com
+                    </a>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Du Depp App</strong> - Das ultimative Party-Spiel</p>
+            <p style="margin-top: 10px;">© 2026 - Alle Rechte vorbehalten / All rights reserved</p>
+        </div>
+    </div>
+
+    <script>
+        function showLanguage(lang) {
+            document.querySelectorAll('.language-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.language-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
