@@ -180,7 +180,7 @@
         <div class="content">
             <!-- German Version -->
             <div id="de" class="language-section active">
-                <p class="last-updated">Zuletzt aktualisiert: 16. Februar 2026</p>
+                <p class="last-updated">Zuletzt aktualisiert: 1. Juli 2026</p>
                 
                 <h2>1. Einleitung</h2>
                 <p>
@@ -189,8 +189,11 @@
                 </p>
                 
                 <div class="highlight-box">
-                    <strong>Kurz gesagt:</strong> Wir sammeln KEINE persönlichen Daten. Die App funktioniert komplett offline 
-                    auf deinem Gerät. Alle Einstellungen werden nur lokal gespeichert.
+                    <strong>Kurz gesagt:</strong> Im lokalen Spielmodus (Pass-and-Play) funktioniert die App komplett offline 
+                    auf deinem Gerät und wir sammeln keine Daten. Nutzt du den optionalen <strong>Hosted-Modus</strong> 
+                    (Online-Spiel mit Freunden über einen Link), werden die von dir eingegebenen Spielernamen und 
+                    Spieleinstellungen an unseren Server übertragen, damit andere Mitspieler beitreten können. 
+                    Details dazu findest du in Abschnitt 3.2.
                 </div>
                 
                 <h2>2. Verantwortlicher</h2>
@@ -203,7 +206,7 @@
                 <h2>3. Welche Daten werden erfasst?</h2>
                 
                 <h3>3.1 Lokale Speicherung (auf deinem Gerät)</h3>
-                <p>Die App speichert folgende Daten <strong>nur lokal</strong> auf deinem Gerät:</p>
+                <p>Im lokalen Spielmodus (Pass-and-Play) speichert die App folgende Daten <strong>nur lokal</strong> auf deinem Gerät:</p>
                 <ul>
                     <li><strong>Spieleinstellungen:</strong> Startzeit, Spielernamen (die du eingibst), Kategorien-Einstellungen</li>
                     <li><strong>Spielstände:</strong> Punktzahlen während einer Spielsitzung</li>
@@ -213,8 +216,32 @@
                     Sie werden nicht an uns oder Dritte übermittelt.
                 </p>
                 
-                <h3>3.2 Keine persönlichen Daten</h3>
-                <p>Wir sammeln KEINE:</p>
+                <h3>3.2 Hosted-Modus (Online-Spiel mit Freunden)</h3>
+                <p>
+                    Die App bietet optional einen "Hosted-Modus" an, mit dem du eine Spielsitzung starten und Freunde 
+                    per Link einladen kannst, damit sie über die App oder einen Browser beitreten können. Wenn du 
+                    diesen Modus nutzt, werden folgende Daten an unseren Server (gehostet bei Railway) übertragen:
+                </p>
+                <ul>
+                    <li>Die von dir eingegebenen <strong>Spielernamen</strong></li>
+                    <li>Die gewählten <strong>Spieleinstellungen</strong> (z. B. Kategorien, Startzeit)</li>
+                    <li>Spielstand- und Rundendaten während der aktiven Sitzung (z. B. Punkte, Timer-Status)</li>
+                    <li>Ein zufällig erzeugtes <strong>Sitzungs- und Platz-Token</strong>, mit dem Geräte der Sitzung zugeordnet werden</li>
+                </ul>
+                <p>
+                    Diese Daten werden ausschließlich im Arbeitsspeicher des Servers verarbeitet, um die Sitzung zu betreiben, 
+                    und <strong>nicht dauerhaft gespeichert</strong> oder in einer Datenbank abgelegt. Sie werden automatisch 
+                    gelöscht, sobald die Sitzung endet oder der Host die Verbindung dauerhaft trennt. Der Hosting-Anbieter 
+                    (Railway) verarbeitet diese Daten in unserem Auftrag ausschließlich zum Betrieb des Servers und nutzt 
+                    sie nicht für eigene Zwecke.
+                </p>
+                <p>
+                    Wenn ein Mitspieler über den Browser-Link beitritt, wird zusätzlich ein Platz-Token in seinem Browser 
+                    (localStorage) gespeichert, damit er der Sitzung erneut zugeordnet werden kann.
+                </p>
+                
+                <h3>3.3 Keine weiteren persönlichen Daten</h3>
+                <p>Über die oben genannten Punkte hinaus sammeln wir KEINE:</p>
                 <ul>
                     <li>Namen, E-Mail-Adressen oder Kontaktdaten</li>
                     <li>Standortdaten</li>
@@ -226,23 +253,34 @@
                 <h2>4. Wie werden Daten verwendet?</h2>
                 <p>
                     Die lokal gespeicherten Daten (Spielernamen, Einstellungen) werden ausschließlich dazu verwendet, 
-                    deine Spieleinstellungen beim nächsten Öffnen der App wiederherzustellen. Das war's!
+                    deine Spieleinstellungen beim nächsten Öffnen der App wiederherzustellen. Im Hosted-Modus werden 
+                    die übertragenen Daten ausschließlich dazu verwendet, die gemeinsame Spielsitzung zwischen den 
+                    teilnehmenden Geräten zu synchronisieren (z. B. Punktestand, aktueller Spielzug, verbleibende Zeit).
                 </p>
                 
                 <h2>5. Datenweitergabe an Dritte</h2>
                 <p>
-                    <strong>Es werden KEINE Daten an Dritte weitergegeben.</strong> Die App enthält keine Analysetools, 
-                    keine Werbenetzwerke und keine externen Dienste, die Daten sammeln könnten.
+                    Die App enthält keine Analysetools, keine Werbenetzwerke und keine externen Dienste, die Daten zu 
+                    Werbe- oder Tracking-Zwecken sammeln. Im <strong>Hosted-Modus</strong> werden Spielernamen und 
+                    Sitzungsdaten an unseren Hosting-Anbieter (Railway) übertragen, der diese Daten ausschließlich als 
+                    Auftragsverarbeiter zum technischen Betrieb des Servers nutzt (siehe Abschnitt 3.2). Eine 
+                    Weitergabe zu anderen Zwecken findet nicht statt.
                 </p>
                 
                 <h2>6. Datensicherheit</h2>
                 <p>
-                    Da alle Daten nur lokal auf deinem Gerät gespeichert werden, liegt die Sicherheit in deiner Hand. 
-                    Wir empfehlen, dein Gerät mit einem Passcode/Touch ID/Face ID zu schützen.
+                    Im lokalen Spielmodus werden alle Daten nur auf deinem Gerät gespeichert, daher liegt die Sicherheit 
+                    hier in deiner Hand. Wir empfehlen, dein Gerät mit einem Passcode/Touch ID/Face ID zu schützen. 
+                    Im Hosted-Modus wird die Übertragung zu unserem Server über eine verschlüsselte Verbindung (HTTPS) 
+                    abgesichert; die Daten werden dort nur temporär im Arbeitsspeicher verarbeitet (siehe Abschnitt 3.2).
                 </p>
                 
                 <h2>7. Deine Rechte</h2>
-                <p>Da wir keine persönlichen Daten sammeln, gibt es keine zentrale Datenbank, auf die du zugreifen müsstest. Du kannst:</p>
+                <p>
+                    Im lokalen Spielmodus sammeln wir keine persönlichen Daten, daher gibt es keine zentrale Datenbank, 
+                    auf die du zugreifen müsstest. Im Hosted-Modus werden Sitzungsdaten automatisch gelöscht, sobald die 
+                    Sitzung endet – eine dauerhafte Speicherung findet nicht statt. Du kannst außerdem:
+                </p>
                 <ul>
                     <li><strong>Alle Daten löschen:</strong> Nutze die "Einstellungen zurücksetzen"-Funktion in der App 
                         oder deinstalliere die App komplett</li>
@@ -251,8 +289,10 @@
                 
                 <h2>8. Kinder</h2>
                 <p>
-                    Die App richtet sich an Nutzer jeden Alters und sammelt keine persönlichen Daten. 
-                    Eltern sollten jedoch die Spielernamen, die ihre Kinder eingeben, im Auge behalten.
+                    Die App richtet sich an Nutzer jeden Alters. Im lokalen Spielmodus werden keine persönlichen Daten 
+                    gesammelt; im optionalen Hosted-Modus werden nur die eingegebenen Spielernamen temporär an unseren 
+                    Server übertragen (siehe Abschnitt 3.2). Eltern sollten die Spielernamen, die ihre Kinder eingeben, 
+                    im Auge behalten.
                 </p>
                 
                 <h2>9. Änderungen dieser Datenschutzerklärung</h2>
@@ -270,7 +310,7 @@
             
             <!-- English Version -->
             <div id="en" class="language-section">
-                <p class="last-updated">Last updated: February 16, 2026</p>
+                <p class="last-updated">Last updated: July 1, 2026</p>
                 
                 <h2>1. Introduction</h2>
                 <p>
@@ -279,8 +319,10 @@
                 </p>
                 
                 <div class="highlight-box">
-                    <strong>In short:</strong> We do NOT collect any personal data. The app works completely offline 
-                    on your device. All settings are stored locally only.
+                    <strong>In short:</strong> In local play mode (pass-and-play), the app works completely offline on 
+                    your device and we collect no data. If you use the optional <strong>Hosted Mode</strong> (online 
+                    play with friends via a link), the player names and game settings you enter are transmitted to our 
+                    server so other players can join. See section 3.2 for details.
                 </div>
                 
                 <h2>2. Data Controller</h2>
@@ -293,7 +335,7 @@
                 <h2>3. What Data is Collected?</h2>
                 
                 <h3>3.1 Local Storage (on your device)</h3>
-                <p>The app stores the following data <strong>only locally</strong> on your device:</p>
+                <p>In local play mode (pass-and-play), the app stores the following data <strong>only locally</strong> on your device:</p>
                 <ul>
                     <li><strong>Game settings:</strong> Start time, player names (that you enter), category settings</li>
                     <li><strong>Game scores:</strong> Points during a game session</li>
@@ -303,8 +345,31 @@
                     It is not transmitted to us or any third parties.
                 </p>
                 
-                <h3>3.2 No Personal Data</h3>
-                <p>We do NOT collect:</p>
+                <h3>3.2 Hosted Mode (online play with friends)</h3>
+                <p>
+                    The app optionally offers a "Hosted Mode" that lets you start a game session and invite friends 
+                    via a link to join through the app or a web browser. If you use this mode, the following data 
+                    is transmitted to our server (hosted on Railway):
+                </p>
+                <ul>
+                    <li>The <strong>player names</strong> you enter</li>
+                    <li>The chosen <strong>game settings</strong> (e.g. categories, start time)</li>
+                    <li>Score and round data during the active session (e.g. points, timer state)</li>
+                    <li>A randomly generated <strong>session and seat token</strong> used to link devices to the session</li>
+                </ul>
+                <p>
+                    This data is processed only in the server's memory to run the session and is 
+                    <strong>not stored permanently</strong> or kept in a database. It is automatically deleted once the 
+                    session ends or the host permanently disconnects. Our hosting provider (Railway) processes this 
+                    data on our behalf solely to operate the server and does not use it for its own purposes.
+                </p>
+                <p>
+                    If a player joins via the web browser link, a seat token is also stored in their browser 
+                    (localStorage) so they can be reconnected to the session.
+                </p>
+                
+                <h3>3.3 No Other Personal Data</h3>
+                <p>Beyond what is described above, we do NOT collect:</p>
                 <ul>
                     <li>Names, email addresses, or contact information</li>
                     <li>Location data</li>
@@ -316,23 +381,34 @@
                 <h2>4. How is Data Used?</h2>
                 <p>
                     The locally stored data (player names, settings) is used exclusively to restore your game settings 
-                    the next time you open the app. That's it!
+                    the next time you open the app. In Hosted Mode, the transmitted data is used exclusively to 
+                    synchronize the shared game session between participating devices (e.g. score, current turn, 
+                    remaining time).
                 </p>
                 
                 <h2>5. Data Sharing with Third Parties</h2>
                 <p>
-                    <strong>NO data is shared with third parties.</strong> The app contains no analytics tools, 
-                    no advertising networks, and no external services that could collect data.
+                    The app contains no analytics tools, no advertising networks, and no external services that 
+                    collect data for advertising or tracking purposes. In <strong>Hosted Mode</strong>, player names 
+                    and session data are transmitted to our hosting provider (Railway), which processes this data 
+                    solely as a data processor to technically operate the server (see section 3.2). Data is not 
+                    shared for any other purpose.
                 </p>
                 
                 <h2>6. Data Security</h2>
                 <p>
-                    Since all data is stored only locally on your device, security is in your hands. 
-                    We recommend protecting your device with a passcode/Touch ID/Face ID.
+                    In local play mode, all data is stored only on your device, so security is in your hands. We 
+                    recommend protecting your device with a passcode/Touch ID/Face ID. In Hosted Mode, the transfer 
+                    to our server is secured via an encrypted connection (HTTPS); data is processed there only 
+                    temporarily in memory (see section 3.2).
                 </p>
                 
                 <h2>7. Your Rights</h2>
-                <p>Since we don't collect personal data, there's no central database you need to access. You can:</p>
+                <p>
+                    In local play mode, we don't collect personal data, so there's no central database you need to 
+                    access. In Hosted Mode, session data is automatically deleted once the session ends – it is not 
+                    stored permanently. You can also:
+                </p>
                 <ul>
                     <li><strong>Delete all data:</strong> Use the "Reset Settings" feature in the app 
                         or uninstall the app completely</li>
@@ -341,8 +417,9 @@
                 
                 <h2>8. Children</h2>
                 <p>
-                    The app is suitable for users of all ages and does not collect personal data. 
-                    However, parents should monitor the player names their children enter.
+                    The app is suitable for users of all ages. In local play mode, no personal data is collected; in 
+                    the optional Hosted Mode, only the player names entered are temporarily transmitted to our server 
+                    (see section 3.2). Parents should monitor the player names their children enter.
                 </p>
                 
                 <h2>9. Changes to this Privacy Policy</h2>
