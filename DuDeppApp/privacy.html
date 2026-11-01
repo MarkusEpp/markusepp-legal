@@ -180,7 +180,7 @@
         <div class="content">
             <!-- German Version -->
             <div id="de" class="language-section active">
-                <p class="last-updated">Zuletzt aktualisiert: 1. Juli 2026</p>
+                <p class="last-updated">Zuletzt aktualisiert: 1. November 2026</p>
                 
                 <h2>1. Einleitung</h2>
                 <p>
@@ -229,21 +229,31 @@
                     <li>Ein zufällig erzeugtes <strong>Sitzungs- und Platz-Token</strong>, mit dem Geräte der Sitzung zugeordnet werden</li>
                 </ul>
                 <p>
-                    Diese Daten werden ausschließlich im Arbeitsspeicher des Servers verarbeitet, um die Sitzung zu betreiben, 
-                    und <strong>nicht dauerhaft gespeichert</strong> oder in einer Datenbank abgelegt. Sie werden automatisch 
-                    gelöscht, sobald die Sitzung endet oder der Host die Verbindung dauerhaft trennt. Der Hosting-Anbieter 
-                    (Railway) verarbeitet diese Daten in unserem Auftrag ausschließlich zum Betrieb des Servers und nutzt 
-                    sie nicht für eigene Zwecke.
+                    Diese Daten werden ausschließlich im Arbeitsspeicher des Servers verarbeitet, um die Sitzung zu betreiben,
+                    und <strong>nicht dauerhaft gespeichert</strong> oder in einer Datenbank abgelegt. Eine Sitzung endet,
+                    wenn der Host sie verlässt, während eines laufenden Spiels länger als eine Minute die Verbindung verliert, 60 Minuten lang keine
+                    Aktivität stattfindet oder spätestens 12 Stunden nach ihrem Start. Die Sitzungsdaten werden spätestens
+                    5 Minuten nach dem Ende der Sitzung automatisch gelöscht, bei einem Neustart des Servers sofort.
+                    Der Hosting-Anbieter (Railway) verarbeitet diese Daten in unserem Auftrag ausschließlich zum Betrieb
+                    des Servers und nutzt sie nicht für eigene Zwecke.
                 </p>
                 <p>
-                    Wenn ein Mitspieler über den Browser-Link beitritt, wird zusätzlich ein Platz-Token in seinem Browser 
+                    Wenn ein Mitspieler über den Browser-Link beitritt, wird die Beitrittsseite von unserem
+                    Hosting-Anbieter Vercel ausgeliefert, und zusätzlich wird ein Platz-Token in seinem Browser
                     (localStorage) gespeichert, damit er der Sitzung erneut zugeordnet werden kann.
+                </p>
+                <p>
+                    <strong>Technische Verbindungsdaten:</strong> Um den Server vor Missbrauch zu schützen, wird im
+                    Hosted-Modus die IP-Adresse deines Geräts kurzzeitig (für höchstens eine Minute) im Arbeitsspeicher
+                    verwendet, um die Anzahl der Anfragen zu begrenzen. Wir speichern oder protokollieren IP-Adressen
+                    nicht. Unsere Hosting-Anbieter (Railway und Vercel) können technisch bedingt Verbindungsdaten wie
+                    die IP-Adresse kurzzeitig in ihren eigenen Server-Protokollen verarbeiten.
                 </p>
                 
                 <h3>3.3 Keine weiteren persönlichen Daten</h3>
                 <p>Über die oben genannten Punkte hinaus sammeln wir KEINE:</p>
                 <ul>
-                    <li>Namen, E-Mail-Adressen oder Kontaktdaten</li>
+                    <li>E-Mail-Adressen, Telefonnummern oder andere Kontaktdaten (Spielernamen werden nur wie oben beschrieben verarbeitet)</li>
                     <li>Standortdaten</li>
                     <li>Fotos oder Dateien von deinem Gerät</li>
                     <li>Nutzungsstatistiken oder Analysen</li>
@@ -261,10 +271,10 @@
                 <h2>5. Datenweitergabe an Dritte</h2>
                 <p>
                     Die App enthält keine Analysetools, keine Werbenetzwerke und keine externen Dienste, die Daten zu 
-                    Werbe- oder Tracking-Zwecken sammeln. Im <strong>Hosted-Modus</strong> werden Spielernamen und 
-                    Sitzungsdaten an unseren Hosting-Anbieter (Railway) übertragen, der diese Daten ausschließlich als 
-                    Auftragsverarbeiter zum technischen Betrieb des Servers nutzt (siehe Abschnitt 3.2). Eine 
-                    Weitergabe zu anderen Zwecken findet nicht statt.
+                    Werbe- oder Tracking-Zwecken sammeln. Im <strong>Hosted-Modus</strong> werden Spielernamen und
+                    Sitzungsdaten über unsere Hosting-Anbieter (Railway für den Spielserver, Vercel für die
+                    Beitrittsseite im Browser) übertragen, die diese Daten ausschließlich als Auftragsverarbeiter zum
+                    technischen Betrieb nutzen (siehe Abschnitt 3.2). Eine Weitergabe zu anderen Zwecken findet nicht statt.
                 </p>
                 
                 <h2>6. Datensicherheit</h2>
@@ -278,8 +288,8 @@
                 <h2>7. Deine Rechte</h2>
                 <p>
                     Im lokalen Spielmodus sammeln wir keine persönlichen Daten, daher gibt es keine zentrale Datenbank, 
-                    auf die du zugreifen müsstest. Im Hosted-Modus werden Sitzungsdaten automatisch gelöscht, sobald die 
-                    Sitzung endet – eine dauerhafte Speicherung findet nicht statt. Du kannst außerdem:
+                    auf die du zugreifen müsstest. Im Hosted-Modus werden Sitzungsdaten spätestens 5 Minuten nach dem Ende
+                    der Sitzung automatisch gelöscht – eine dauerhafte Speicherung findet nicht statt. Du kannst außerdem:
                 </p>
                 <ul>
                     <li><strong>Alle Daten löschen:</strong> Nutze die "Einstellungen zurücksetzen"-Funktion in der App 
@@ -310,7 +320,7 @@
             
             <!-- English Version -->
             <div id="en" class="language-section">
-                <p class="last-updated">Last updated: July 1, 2026</p>
+                <p class="last-updated">Last updated: November 1, 2026</p>
                 
                 <h2>1. Introduction</h2>
                 <p>
@@ -359,19 +369,28 @@
                 </ul>
                 <p>
                     This data is processed only in the server's memory to run the session and is 
-                    <strong>not stored permanently</strong> or kept in a database. It is automatically deleted once the 
-                    session ends or the host permanently disconnects. Our hosting provider (Railway) processes this 
-                    data on our behalf solely to operate the server and does not use it for its own purposes.
+                    <strong>not stored permanently</strong> or kept in a database. A session ends when the host leaves it,
+                    loses the connection for more than one minute during a running game, after 60 minutes without activity, or at the latest 12 hours
+                    after it started. Session data is automatically deleted no later than 5 minutes after the session
+                    ends, and immediately if the server restarts. Our hosting provider (Railway) processes this data on
+                    our behalf solely to operate the server and does not use it for its own purposes.
                 </p>
                 <p>
-                    If a player joins via the web browser link, a seat token is also stored in their browser 
-                    (localStorage) so they can be reconnected to the session.
+                    If a player joins via the web browser link, the join page is served by our hosting provider Vercel,
+                    and a seat token is also stored in their browser (localStorage) so they can be reconnected to the
+                    session.
+                </p>
+                <p>
+                    <strong>Technical connection data:</strong> To protect the server from abuse, Hosted Mode briefly
+                    uses your device's IP address in memory (for at most one minute) to limit the number of requests.
+                    We do not store or log IP addresses. Our hosting providers (Railway and Vercel) may briefly process
+                    connection data such as the IP address in their own server logs for technical reasons.
                 </p>
                 
                 <h3>3.3 No Other Personal Data</h3>
                 <p>Beyond what is described above, we do NOT collect:</p>
                 <ul>
-                    <li>Names, email addresses, or contact information</li>
+                    <li>Email addresses, phone numbers, or other contact information (player names are only processed as described above)</li>
                     <li>Location data</li>
                     <li>Photos or files from your device</li>
                     <li>Usage statistics or analytics</li>
@@ -389,10 +408,10 @@
                 <h2>5. Data Sharing with Third Parties</h2>
                 <p>
                     The app contains no analytics tools, no advertising networks, and no external services that 
-                    collect data for advertising or tracking purposes. In <strong>Hosted Mode</strong>, player names 
-                    and session data are transmitted to our hosting provider (Railway), which processes this data 
-                    solely as a data processor to technically operate the server (see section 3.2). Data is not 
-                    shared for any other purpose.
+                    collect data for advertising or tracking purposes. In <strong>Hosted Mode</strong>, player names
+                    and session data are transmitted via our hosting providers (Railway for the game server, Vercel
+                    for the browser join page), which process this data solely as data processors for technical
+                    operation (see section 3.2). Data is not shared for any other purpose.
                 </p>
                 
                 <h2>6. Data Security</h2>
@@ -406,8 +425,8 @@
                 <h2>7. Your Rights</h2>
                 <p>
                     In local play mode, we don't collect personal data, so there's no central database you need to 
-                    access. In Hosted Mode, session data is automatically deleted once the session ends – it is not 
-                    stored permanently. You can also:
+                    access. In Hosted Mode, session data is automatically deleted no later than 5 minutes after the
+                    session ends – it is not stored permanently. You can also:
                 </p>
                 <ul>
                     <li><strong>Delete all data:</strong> Use the "Reset Settings" feature in the app 
