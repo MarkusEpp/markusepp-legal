@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung / Privacy Policy - Du Depp App</title>
+    <title>Datenschutzerklärung / Privacy Policy - DuDeppApp</title>
     <style>
         * {
             margin: 0;
@@ -168,7 +168,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎯 Du Depp App</h1>
+            <h1>🎯 DuDeppApp</h1>
             <p>Datenschutzerklärung / Privacy Policy</p>
         </div>
         
@@ -180,17 +180,17 @@
         <div class="content">
             <!-- German Version -->
             <div id="de" class="language-section active">
-                <p class="last-updated">Zuletzt aktualisiert: 1. November 2026</p>
-                
+                <p class="last-updated">Zuletzt aktualisiert: 6. November 2026</p>
+
                 <h2>1. Einleitung</h2>
                 <p>
-                    Willkommen bei der "Du Depp App"! Diese Datenschutzerklärung erklärt, wie wir mit deinen Daten umgehen, 
-                    wenn du unsere App nutzt. Dein Datenschutz ist uns wichtig.
+                    Willkommen bei der "DuDeppApp"! Diese Datenschutzerklärung erklärt, wie wir mit deinen Daten umgehen,
+                    wenn du die DuDeppApp in deinem Browser nutzt. Dein Datenschutz ist uns wichtig.
                 </p>
-                
+
                 <div class="highlight-box">
-                    <strong>Kurz gesagt:</strong> Im lokalen Spielmodus (Pass-and-Play) funktioniert die App komplett offline 
-                    auf deinem Gerät und wir sammeln keine Daten. Nutzt du den optionalen <strong>Hosted-Modus</strong> 
+                    <strong>Kurz gesagt:</strong> Im lokalen Spielmodus (Pass-and-Play) läuft das Spiel komplett
+                    in deinem Browser auf deinem Gerät und wir sammeln keine Daten. Nutzt du den optionalen <strong>Hosted-Modus</strong> 
                     (Online-Spiel mit Freunden über einen Link), werden die von dir eingegebenen Spielernamen und 
                     Spieleinstellungen an unseren Server übertragen, damit andere Mitspieler beitreten können. 
                     Details dazu findest du in Abschnitt 3.2.
@@ -205,21 +205,22 @@
                 
                 <h2>3. Welche Daten werden erfasst?</h2>
                 
-                <h3>3.1 Lokale Speicherung (auf deinem Gerät)</h3>
+                <h3>3.1 Lokale Speicherung (in deinem Browser)</h3>
                 <p>Im lokalen Spielmodus (Pass-and-Play) speichert die App folgende Daten <strong>nur lokal</strong> auf deinem Gerät:</p>
                 <ul>
                     <li><strong>Spieleinstellungen:</strong> Startzeit, Spielernamen (die du eingibst), Kategorien-Einstellungen</li>
                     <li><strong>Spielstände:</strong> Punktzahlen während einer Spielsitzung</li>
+                    <li><strong>Präferenzen:</strong> z. B. ob Ton und Vibration eingeschaltet sind</li>
                 </ul>
                 <p>
-                    Diese Daten werden mit AsyncStorage (lokaler Speicher) gespeichert und <strong>verlassen niemals dein Gerät</strong>. 
-                    Sie werden nicht an uns oder Dritte übermittelt.
+                    Diese Daten werden im lokalen Speicher deines Browsers (localStorage bzw. sessionStorage) abgelegt und
+                    <strong>verlassen im lokalen Spielmodus niemals dein Gerät</strong>. Sie werden nicht an uns oder Dritte übermittelt.
                 </p>
                 
                 <h3>3.2 Hosted-Modus (Online-Spiel mit Freunden)</h3>
                 <p>
-                    Die App bietet optional einen "Hosted-Modus" an, mit dem du eine Spielsitzung starten und Freunde 
-                    per Link einladen kannst, damit sie über die App oder einen Browser beitreten können. Wenn du 
+                    Die App bietet optional einen "Hosted-Modus" an, mit dem du eine Spielsitzung starten und Freunde
+                    per Link, QR-Code oder Raumcode einladen kannst, damit sie mit ihrem Browser beitreten können. Wenn du
                     diesen Modus nutzt, werden folgende Daten an unseren Server (gehostet bei Railway) übertragen:
                 </p>
                 <ul>
@@ -238,9 +239,8 @@
                     des Servers und nutzt sie nicht für eigene Zwecke.
                 </p>
                 <p>
-                    Wenn ein Mitspieler über den Browser-Link beitritt, wird die Beitrittsseite von unserem
-                    Hosting-Anbieter Vercel ausgeliefert, und zusätzlich wird ein Platz-Token in seinem Browser
-                    (localStorage) gespeichert, damit er der Sitzung erneut zugeordnet werden kann.
+                    Damit Host und Mitspieler der Sitzung nach einem Neuladen der Seite erneut zugeordnet werden können,
+                    wird zusätzlich ihr Platz-Token im Browser (localStorage) gespeichert.
                 </p>
                 <p>
                     <strong>Technische Verbindungsdaten:</strong> Um den Server vor Missbrauch zu schützen, wird im
@@ -250,7 +250,21 @@
                     die IP-Adresse kurzzeitig in ihren eigenen Server-Protokollen verarbeiten.
                 </p>
                 
-                <h3>3.3 Keine weiteren persönlichen Daten</h3>
+                <h3>3.3 Aufruf der Website und Offline-Nutzung</h3>
+                <p>
+                    Die DuDeppApp wird als Website von unserem Hosting-Anbieter Vercel ausgeliefert. Beim Aufruf der
+                    Website verarbeitet Vercel technisch notwendige Verbindungsdaten (z. B. IP-Adresse, Zeitpunkt,
+                    Browsertyp) in eigenen Server-Protokollen, um die Seite auszuliefern und vor Missbrauch zu schützen.
+                    Wir selbst werten diese Daten nicht aus.
+                </p>
+                <p>
+                    Damit du lokal auch ohne Internetverbindung spielen kannst, legt ein sogenannter Service Worker
+                    die Dateien der App (Programmcode, Bilder, Töne) im Speicher deines Browsers ab. Dabei werden
+                    keine persönlichen Daten gespeichert oder übertragen. Wenn du die DuDeppApp zum Startbildschirm
+                    hinzufügst, gilt dasselbe.
+                </p>
+
+                <h3>3.4 Keine weiteren persönlichen Daten</h3>
                 <p>Über die oben genannten Punkte hinaus sammeln wir KEINE:</p>
                 <ul>
                     <li>E-Mail-Adressen, Telefonnummern oder andere Kontaktdaten (Spielernamen werden nur wie oben beschrieben verarbeitet)</li>
@@ -271,10 +285,11 @@
                 <h2>5. Datenweitergabe an Dritte</h2>
                 <p>
                     Die App enthält keine Analysetools, keine Werbenetzwerke und keine externen Dienste, die Daten zu 
-                    Werbe- oder Tracking-Zwecken sammeln. Im <strong>Hosted-Modus</strong> werden Spielernamen und
-                    Sitzungsdaten über unsere Hosting-Anbieter (Railway für den Spielserver, Vercel für die
-                    Beitrittsseite im Browser) übertragen, die diese Daten ausschließlich als Auftragsverarbeiter zum
-                    technischen Betrieb nutzen (siehe Abschnitt 3.2). Eine Weitergabe zu anderen Zwecken findet nicht statt.
+                    Werbe- oder Tracking-Zwecken sammeln. Die Website wird über unseren Hosting-Anbieter Vercel
+                    ausgeliefert (siehe Abschnitt 3.3). Im <strong>Hosted-Modus</strong> werden Spielernamen und
+                    Sitzungsdaten zusätzlich an unseren Spielserver bei Railway übertragen (siehe Abschnitt 3.2). Beide
+                    Anbieter nutzen diese Daten ausschließlich als Auftragsverarbeiter zum technischen Betrieb. Eine
+                    Weitergabe zu anderen Zwecken findet nicht statt.
                 </p>
                 
                 <h2>6. Datensicherheit</h2>
@@ -292,8 +307,9 @@
                     der Sitzung automatisch gelöscht – eine dauerhafte Speicherung findet nicht statt. Du kannst außerdem:
                 </p>
                 <ul>
-                    <li><strong>Alle Daten löschen:</strong> Nutze die "Einstellungen zurücksetzen"-Funktion in der App 
-                        oder deinstalliere die App komplett</li>
+                    <li><strong>Alle Daten löschen:</strong> Nutze "Einstellungen zurücksetzen" im Spiel-Setup oder lösche die
+                        Website-Daten der DuDeppApp in den Einstellungen deines Browsers. Hast du sie zum Startbildschirm
+                        hinzugefügt, kannst du sie dort wie eine App entfernen.</li>
                     <li><strong>Einstellungen ändern:</strong> Jederzeit in der App möglich</li>
                 </ul>
                 
@@ -320,17 +336,17 @@
             
             <!-- English Version -->
             <div id="en" class="language-section">
-                <p class="last-updated">Last updated: November 1, 2026</p>
-                
+                <p class="last-updated">Last updated: November 6, 2026</p>
+
                 <h2>1. Introduction</h2>
                 <p>
-                    Welcome to "Du Depp App"! This Privacy Policy explains how we handle your data when you use our app. 
-                    Your privacy is important to us.
+                    Welcome to "DuDeppApp"! This Privacy Policy explains how we handle your data when you use DuDeppApp
+                    in your browser. Your privacy is important to us.
                 </p>
-                
+
                 <div class="highlight-box">
-                    <strong>In short:</strong> In local play mode (pass-and-play), the app works completely offline on 
-                    your device and we collect no data. If you use the optional <strong>Hosted Mode</strong> (online 
+                    <strong>In short:</strong> In local play mode (pass-and-play), the game runs entirely in your
+                    browser on your device and we collect no data. If you use the optional <strong>Hosted Mode</strong> (online 
                     play with friends via a link), the player names and game settings you enter are transmitted to our 
                     server so other players can join. See section 3.2 for details.
                 </div>
@@ -344,21 +360,22 @@
                 
                 <h2>3. What Data is Collected?</h2>
                 
-                <h3>3.1 Local Storage (on your device)</h3>
+                <h3>3.1 Local Storage (in your browser)</h3>
                 <p>In local play mode (pass-and-play), the app stores the following data <strong>only locally</strong> on your device:</p>
                 <ul>
                     <li><strong>Game settings:</strong> Start time, player names (that you enter), category settings</li>
                     <li><strong>Game scores:</strong> Points during a game session</li>
+                    <li><strong>Preferences:</strong> e.g. whether sound and vibration are turned on</li>
                 </ul>
                 <p>
-                    This data is stored using AsyncStorage (local storage) and <strong>never leaves your device</strong>. 
-                    It is not transmitted to us or any third parties.
+                    This data is kept in your browser's local storage (localStorage or sessionStorage) and
+                    <strong>never leaves your device in local play mode</strong>. It is not transmitted to us or any third parties.
                 </p>
                 
                 <h3>3.2 Hosted Mode (online play with friends)</h3>
                 <p>
-                    The app optionally offers a "Hosted Mode" that lets you start a game session and invite friends 
-                    via a link to join through the app or a web browser. If you use this mode, the following data 
+                    The app optionally offers a "Hosted Mode" that lets you start a game session and invite friends
+                    via a link, QR code or room code to join with their browser. If you use this mode, the following data
                     is transmitted to our server (hosted on Railway):
                 </p>
                 <ul>
@@ -376,9 +393,8 @@
                     our behalf solely to operate the server and does not use it for its own purposes.
                 </p>
                 <p>
-                    If a player joins via the web browser link, the join page is served by our hosting provider Vercel,
-                    and a seat token is also stored in their browser (localStorage) so they can be reconnected to the
-                    session.
+                    So that the host and other players can be reconnected to the session after reloading the page,
+                    their seat token is also stored in their browser (localStorage).
                 </p>
                 <p>
                     <strong>Technical connection data:</strong> To protect the server from abuse, Hosted Mode briefly
@@ -387,7 +403,19 @@
                     connection data such as the IP address in their own server logs for technical reasons.
                 </p>
                 
-                <h3>3.3 No Other Personal Data</h3>
+                <h3>3.3 Visiting the Website and Offline Use</h3>
+                <p>
+                    DuDeppApp is served as a website by our hosting provider Vercel. When you visit the website, Vercel
+                    processes technically necessary connection data (e.g. IP address, time, browser type) in its own
+                    server logs to deliver the page and protect it from abuse. We do not analyze this data ourselves.
+                </p>
+                <p>
+                    So that you can play locally without an internet connection, a so-called service worker stores the
+                    app's files (program code, images, sounds) in your browser's storage. No personal data is stored or
+                    transmitted in the process. The same applies if you add DuDeppApp to your home screen.
+                </p>
+
+                <h3>3.4 No Other Personal Data</h3>
                 <p>Beyond what is described above, we do NOT collect:</p>
                 <ul>
                     <li>Email addresses, phone numbers, or other contact information (player names are only processed as described above)</li>
@@ -408,10 +436,10 @@
                 <h2>5. Data Sharing with Third Parties</h2>
                 <p>
                     The app contains no analytics tools, no advertising networks, and no external services that 
-                    collect data for advertising or tracking purposes. In <strong>Hosted Mode</strong>, player names
-                    and session data are transmitted via our hosting providers (Railway for the game server, Vercel
-                    for the browser join page), which process this data solely as data processors for technical
-                    operation (see section 3.2). Data is not shared for any other purpose.
+                    collect data for advertising or tracking purposes. The website is served by our hosting provider
+                    Vercel (see section 3.3). In <strong>Hosted Mode</strong>, player names and session data are also
+                    transmitted to our game server at Railway (see section 3.2). Both providers process this data
+                    solely as data processors for technical operation. Data is not shared for any other purpose.
                 </p>
                 
                 <h2>6. Data Security</h2>
@@ -429,8 +457,9 @@
                     session ends – it is not stored permanently. You can also:
                 </p>
                 <ul>
-                    <li><strong>Delete all data:</strong> Use the "Reset Settings" feature in the app 
-                        or uninstall the app completely</li>
+                    <li><strong>Delete all data:</strong> Use "Einstellungen zurücksetzen" (reset settings) in the game setup or clear
+                        DuDeppApp's site data in your browser settings. If you added it to your home screen, you can
+                        remove it there like any app.</li>
                     <li><strong>Change settings:</strong> Possible at any time in the app</li>
                 </ul>
                 
@@ -456,7 +485,7 @@
         </div>
         
         <div class="footer">
-            <p><strong>Du Depp App</strong> - Das ultimative Party-Spiel</p>
+            <p><strong>DuDeppApp</strong> - Das ultimative Party-Spiel</p>
             <p style="margin-top: 10px;">© 2026 - Alle Rechte vorbehalten / All rights reserved</p>
         </div>
     </div>
